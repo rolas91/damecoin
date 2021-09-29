@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/買う-:cripto/カードイン-:currency',
+
+
+];

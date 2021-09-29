@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/koupit-:cripto/s-kartou-:currency',
+
+
+];

@@ -1,0 +1,77 @@
+
+.navbar-landing{
+    margin-top: 1%;
+    transition: 0.3s ease;
+    .navbar-brand{
+        img{
+            width: 190px;
+        }
+    }
+
+    .nav-item{
+        margin-left: 10px;
+    }
+    
+
+
+    .nav-link{
+        color: $light !important;
+        font-weight: 300 !important;
+        font-size: 1rem;
+        
+    }
+
+    .dropdown{
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+        .dropdown-toggle{
+            padding-right: 20px;
+            position: relative;
+            .icon{
+                position: absolute;
+                right: 2px;
+                top: 0;
+                bottom: 5px;
+                margin: auto;
+                width: 10px;
+                height: 10px;
+                border-left:2px solid $light;
+                border-bottom:2px solid $light;
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+
+    .navbar-toggler{
+        outline: none !important;
+        border: 1px solid $light;
+        width: 50px;
+        height: 40px;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column;
+        transform: scale(0.8);
+        span{
+            width: 30px;
+            height: 2px;
+            background: $light;
+            margin: 3px 0;
+        }
+    }
+
+    @include large{
+        .navbar-toggler{
+            display: none !important;
+        }
+    }
+}
+
+.navbar-landing-fixed{
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #16285E !important;
+}

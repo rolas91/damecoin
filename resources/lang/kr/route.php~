@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/사다-:cripto/카드 인-:currency',
+
+
+];

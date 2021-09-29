@@ -1,0 +1,55 @@
+/** Media Queries **/
+
+@mixin maxSamll {
+    @media only screen and (max-width: #{$maxSamll}) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media only screen and (min-width: #{$small}) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and (min-width: #{$medium}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: #{$large}) {
+        @content;
+    }
+}
+
+@mixin extra-large {
+    @media only screen and (min-width: #{$extra-large}) {
+        @content;
+    }
+}
+
+@mixin full-page {
+    @media only screen and (min-width: #{$full-page}) {
+        @content;
+    }
+}
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+
+@mixin transition($time) {
+    transition: all $time ease-in-out;
+}
+
+@mixin flex-center () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

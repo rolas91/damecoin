@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/ซื้อ-:cripto/กับบัตรใน-:currency',
+
+
+];

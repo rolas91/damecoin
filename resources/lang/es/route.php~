@@ -1,0 +1,7 @@
+<?php
+
+return [
+
+    'index' => '/comprar-:cripto/con-tarjeta-en-:currency',
+    'newIndex' => 'new-index/comprar-:cripto/con-tarjeta-en-:currency',
+];

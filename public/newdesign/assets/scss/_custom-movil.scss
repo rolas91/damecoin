@@ -1,0 +1,757 @@
+
+.navbar-top, .navbar-botom{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+.navbar-top{
+    top: 0;
+    height: 70px;
+    border-radius:  0 0 20px 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $blue-first;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+
+    body.dark-mode &{
+        background: #1E2544;
+    }
+
+    img{
+        width: 120px;
+    }
+
+    span{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+.navbar-botom{
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
+    background: url(../img/navbar-movil/curva.svg);
+    background-repeat: no-repeat !important;
+    background-position: center  bottom !important;
+    background-size: contain !important;
+    padding: 10px 10px 0 10px;
+
+    body.dark-mode &{
+        background: url(../img/navbar-movil/curva2.svg);
+    }
+
+
+    @media only screen and (min-width: 360px) {
+        background-position: center  center !important;
+        &::before, &::after{
+            background: $blue-first;
+        }
+
+        body.dark-mode &{
+            &::before, &::after{
+                background: #1E2544;
+            }
+        }
+
+    }
+
+    &::before, &::after{
+        content: '';  
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -3;
+    }
+
+    &::before{
+        left: 0;
+    }
+
+    &::after{
+        right: 0;
+    }
+    
+    ul{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    ul,li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    li a{
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        text-decoration: none;
+        span{
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 90%;
+            }
+        }
+
+        @include small{
+            font-size: 0.9rem;
+            span{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .button-nav{
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(95.09deg, #4C84FF 15.4%, #6BCEEE 102.57%);
+        box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.16);
+        border-radius: 50%;
+        border-style: none;
+        outline: none;
+        position: absolute;
+        margin: auto;
+        top: -20%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        &::before{
+            content: url(../img/navbar-movil/icon-button.png);
+            position: absolute;
+            top: 13px;
+            left: 10px;
+        }
+
+        &.active{
+         
+            &::before{
+                content: url(../img/navbar-movil/icon-button-close.png) !important;
+                position: absolute;
+                top: 10px;
+                left: 9px;
+                
+            }
+        }
+        
+    }
+
+    li a{
+        color: #3E486C !important;
+        span img{
+            filter: contrast(0%) hue-rotate(320deg);
+        }
+
+       
+        &:focus,
+        &.active{
+            color: $blue-fourth !important;
+            span img{
+                filter: brightness(150%) hue-rotate(300deg);
+            }
+        }
+    }
+
+
+}
+
+.container-menu-operar{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    background: #00000057;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding-top: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+
+
+    .menu-operar{
+      
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        background: $light;
+        border-radius: 30px 30px 0px 0px;
+        padding: 20px;
+        padding-bottom: 100px;
+
+        body.dark-mode &{
+            background: $blue-second;
+        }
+
+
+        @include medium{
+            height:  30vh;
+        }
+
+        .operar-enlace{
+
+            background: #23509D;
+            box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.16);
+            border-radius: 5px;
+            width: 100%;
+            min-height: 50px;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: $light;
+
+            body.dark-mode &{
+                background: linear-gradient(33.64deg, #394270 0.7%, #556590 44.08%, #556591 58.71%, #313769 101.04%);
+            }
+
+            .operar-icon{
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                background: linear-gradient(180deg, #555BCD 0%, #8B90F8 100%);
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 60%;
+                }
+            }
+
+            .operar-arrow{
+                width: 24px;
+                height: 24px;
+                background: linear-gradient(95deg, #4C84FF 15.4%, #6BCEEE 102.57%);
+                border-radius: 3px;
+                font-size: 0.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    }
+
+}
+
+.show-menu-operar{
+    transition: 0.3s ease;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.input-tarjeta{
+    input{
+        position: relative;
+        background: #F5F7FB;
+        &::placeholder{
+            font-size: 0.8rem;
+            color: #C7C7C7;
+        }
+    }
+}
+
+.input-tarjeta-icon{
+    input{
+        padding-left: 30px;
+        position: relative;
+        background: #F5F7FB;
+        &::placeholder{
+            font-size: 0.8rem;
+            color: #C7C7C7;
+        }
+    }
+    img{
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        bottom: 0;
+        margin: auto;
+        z-index: 3;
+    }
+}
+
+.modal-acordion{
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    .card{
+        box-shadow: none !important;
+        background: none !important;
+        padding-left: 0 !important;
+        .card-header , .card-body{
+            padding-left: 0 !important;
+        }
+    }
+    button{
+        padding-left: 0 !important;
+        color: $blue-fourth;
+        &:focus{
+           box-shadow: none !important; 
+        }
+    }
+}
+
+.metodos-pago{
+    background: $blue-eight;
+    padding: 10px 8px;
+    border-radius: 5px;
+    width: 49%;
+
+    @include small{
+        padding: 20px;
+    }
+
+    .metodo-icon{
+        width: 50px;
+        height: 50px;
+        background: $blue-seven !important;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    span{
+        font-size: 0.7rem !important;
+    }
+
+
+    p{
+        color: $light;
+        font-size: 0.9rem !important;
+    }
+
+
+    a{
+        background: $blue-seven !important;
+        color: $light !important;
+        font-size: 0.8rem;
+    }
+
+}
+
+
+.modal-custom-comprar{
+
+    .modal-dialog {
+      
+       @include maxSamll{
+        margin: 0 !important;
+        margin-top: 30% !important;
+       }
+    }
+
+    .modal-content{
+        
+        @include maxSamll{
+            border-radius: 30px 30px 0px 0px !important;
+        }
+        body.dark-mode &{
+            background: #3E486C !important;
+        }
+    }
+
+    .modal-header{
+        background: transparent !important;
+        border-style: none;
+        position: relative;
+        
+
+        @include large{
+            background: #16285E !important;
+            color: $light;
+        }
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .close{
+                position: absolute !important;
+                outline: none;
+                border-radius: 50%  !important;
+                width: 40px;
+                height: 40px;
+                padding: 0 !important;
+                top: 20px;
+                right: 20px;
+                transform: scale(0.8);
+                background: linear-gradient(95deg, #4C84FF 15.4%, #6BCEEE 102.57%);
+                box-shadow: 4.60236px 5.17765px 8.62942px rgba(0, 0, 0, 0.16);
+                opacity: 1 !important;
+                color: $light !important;
+            }
+    }
+
+    .modal-body, .modal-footer{
+       
+        border-style: none;
+
+        body.dark-mode &{
+            background: #3E486C;
+        }
+
+    }
+
+}
+
+.select-tarjeta{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+   .card-tarjeta{
+       position: relative;
+        width: 90%;
+        height: 200px;
+        margin: 10px 5px;
+        border-radius: 10px;
+        transition:  all 0.3s ease;
+        cursor: pointer;
+        user-select: none;
+       
+
+        @include large{
+            width: 80%;
+        }
+        
+
+        .checkmark{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $green;
+            box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.16);
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            z-index: 2;
+            opacity: 0;
+            transition:  all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $light;
+            font-size: 0.8rem;
+        }
+
+
+        input[type="radio"]{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        input[type="radio"]:checked ~ .card-div {
+            border: 2px solid $green !important;
+            opacity: 1;
+            box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.16);
+          }
+
+        input[type="radio"]:checked ~ .checkmark {
+            opacity: 1;
+        }
+    }
+
+    .card-mastercard, .card-visa{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: relative !important;
+        overflow: hidden;
+       
+        z-index: 1;
+
+        display: flex;
+        align-items: flex-end;
+
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        &::after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    .card-div{
+        opacity: 0.6;
+        border: 2px solid $light !important;
+        transition: all 0.3s ease;
+    }
+
+    .card-info{
+        z-index: 2;
+
+        width: 100%;
+        height: auto;
+        padding: 5px 10px 5px 30px;
+        color: $light !important;
+        small{
+            color: $light !important;
+        }
+
+        .placa{
+            width: 30px;
+            @include large{
+                width: 45px;
+            }
+        }
+    }
+
+
+    .card-mastercard{
+        background: linear-gradient(115.58deg, #3E6FF7 -3.65%, #88A6FF 97.12%);
+        &::before{
+            content:url(../img/perfil/1.png);
+        }
+        &::after{
+            content: url(../img/perfil/2.png);
+        }
+    }
+
+    .card-visa{
+        background: linear-gradient(115.58deg, #0029FF -3.65%, #8D69DB 97.12%);
+        &::before{
+            content:url(../img/perfil/3.png);
+        }
+        &::after{
+            content: url(../img/perfil/4.png);
+        }
+    }
+
+
+
+
+}
+
+.icon-mode{
+    width: 50px;
+    height: 50px;
+    background-color: $dark;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.6);
+    transition: all 0.3s ease;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 5px;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $light;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -15px;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        background: $dark;
+    }
+
+    body.dark-mode &{
+        background-color: $light;
+        transition: all 0.3s ease;
+        &::before{
+            background-color: #44507D;
+        }
+
+        &::after{
+            background-color: $light;
+        }
+    }
+
+}
+
+
+.container-select-list,.container-select-list-two{
+    background: #F5F7FB;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border-radius: .25rem;
+    padding-top: 3px;
+    // overflow: hidden;
+    cursor: pointer;
+    select{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        border-style: none;
+        outline: none;
+        border-radius: .25rem;
+        appearance: none;
+        padding: .375rem .75rem;
+       
+        cursor: pointer;
+
+    
+    }
+
+    .selectator_element {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: transparent !important;
+        border-style: none !important;
+        &::after{
+            display: none !important;
+        }
+    }
+
+    select::-ms-expand {
+        display: none !important;
+    }
+
+
+    span{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $blue-eight;
+        width: 70px;
+        color: $light;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 .25rem .25rem 0;
+    }
+
+}
+
+.container-select-list-two{
+    width: 230px;
+    background: $blue-eight !important;
+   
+    .selectator_element {
+        color: $light;
+    }
+    .selectator_selected_item_title{
+        color: $light !important;
+        // background: red !important;
+    }
+
+}
+
+.item-options{
+    background: $blue-fourth !important;
+    min-width: 240px !important;
+    height: auto !important;
+    border-radius: 5px;
+    color: $light !important;
+    padding: 10px 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+    body.dark-mode &{
+        background: linear-gradient(180deg, #555BCD 0%, #8B90F8 100%) !important;
+    }
+
+    small{
+        color: $light !important;
+    }
+
+    button{
+        border:  1px solid $light !important;
+        width: 100%;
+        color: $light !important;
+        &:focus{
+            background: #4c85ff26 !important;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12) !important;
+        }
+    }
+
+}
+
+.icon-cambiar-monto{
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/cambiar/switch-small.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+
+    body.dark-mode &{
+        background-image: url('../img/cambiar/switch-dark-small.png');
+    }
+
+}

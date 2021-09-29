@@ -1,0 +1,176 @@
+
+
+.popup-modaldiad-pago{
+
+    .modal-content{
+        background: #FFFFFF;
+        box-shadow: 39px 40px 68px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        border: none;
+        outline: none;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -300px;
+            right: -10px;
+            width: 108%;
+            height: 510px;
+            background: linear-gradient(90.88deg, #3552A2 -0.6%, #09173E 56.01%);
+            border-radius: 0px 0px 120px 0px;
+            transform: matrix(-1, -0.06, -0.04, 1, 0, 0);
+            z-index: 1;
+            @include large{
+                right: -100px;
+                top: -350px;
+            }
+        }
+
+    }
+
+    .modal-header,.modal-footer{
+        border: none;
+    }
+    .modal-header,.modal-footer,.modal-body{
+        z-index: 2;
+    }
+
+    .modal-header{
+        padding-bottom: 2px;
+        h5{
+            font-size: 1.5rem;
+            color: $light;
+            font-weight: 600;
+            @include medium{
+                font-size: 2rem;
+            }
+            span{
+                color: $green;
+            }
+        }
+
+        p{
+           font-size: 0.8rem;
+           @include large{
+            font-size: 14px;
+           }
+        }
+
+        .img-tarjeta{
+            width: 250px;
+            margin-top: -10px;
+            margin-right: 50px;
+        }
+
+        .close{
+            text-shadow: none;
+            opacity: 1;
+            color: $light !important;
+            outline: none;
+        }
+        
+    }
+
+   .card-pago{
+        background: #F5F7FB;
+        border: none;
+        transition: 0.3s ease;
+        border: 3px solid #F5F7FB;
+        &.active{
+            border: 3px solid #23D160;
+        }
+
+        .card-header{
+            border: none;
+            background: transparent;
+            padding-bottom: 0;
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 100px;
+                height: 18px;
+                border-radius: 10px;
+                background: #23D160;
+                color: $light;
+                font-size: 11px;
+                font-weight: 300;
+            }
+
+            h5{ 
+                font-weight: 600;
+                color: #23509D;
+                font-size: 0.8rem;
+                @include large{
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+        .card-body{
+            padding-top: 5px;
+        }
+
+        .card-text{
+            font-weight: 400;
+            font-size: 0.7rem;
+            @include large{
+                font-size: 14px;
+            }
+        }
+        strong{
+            font-size: 0.8rem;
+            line-height: 0 !important;
+            @include large{
+                font-size: 14px;
+            }
+        }
+        .porciento{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            width: 70px;
+            background: #4C84FF;
+            border-radius: 6px;
+            color: $light;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin: auto;
+            @include large{
+                font-size: 15px;
+            }
+        }
+
+        .btn-outline-success{
+            color: $dark;
+            border-color: #3E486C;
+            font-size: 0.8rem;
+            @include large{
+                font-size: 14px;
+            }
+
+            &:hover,&:active{
+                color: $light;
+                border-color: #23D160;;
+                background: #23D160;;
+            }
+        }
+   }
+
+   .modal-footer{
+
+       .btn-primary{
+            width: 200px;
+            background: #CFD6EB;
+            border: none;
+            &.active{
+                background: linear-gradient(95deg, #4C84FF 15.4%, #6BCEEE 102.57%);
+                box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.16);
+            }
+
+       }
+   }
+
+}

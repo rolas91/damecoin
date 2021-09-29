@@ -1,0 +1,76 @@
+
+
+.precio-section{
+    .table-responsive{
+        overflow-y: hidden !important;
+      }
+
+    .table-custom{
+       border: none !important;
+       td, th{
+           border: none !important;
+           color: $gray-first ;
+           vertical-align: middle !important;
+           text-align: center !important;
+       }
+       
+
+       th {
+           position: relative !important;
+       }
+
+       th > button{
+        min-width: 150px !important;
+        padding: 0 !important;
+        @include large{
+            min-width: initial !important;
+        }
+        cursor: pointer;
+        &::before{
+            content: '';
+            display: inline-block;
+            background: $gray-first;
+            width: 8px;
+            height: 5px;
+            margin-right: 6px;
+            clip-path: polygon(49% 0, 0% 100%, 100% 100%);
+            transform: rotate(180deg) !important;
+            transition: 0.3s ease;
+          
+        }
+
+        &:active, &:focus{
+           &::before{
+            transform: rotate(360deg) !important;
+           }
+        }
+       }
+
+       tbody tr{
+         font-size: 0.9rem !important;
+       }
+
+       th:last-child  div{
+            &::before{
+               display: none;
+            }
+       }
+
+       body.dark-mode &{
+            td, th{
+                color: $light !important;
+            }
+            
+            th > button::before{
+                background: $light !important;
+            }
+            th > button{
+                color: $light !important;
+            }
+
+            
+       }
+
+
+    }
+}

@@ -1,0 +1,90 @@
+<?php
+
+return [
+
+    'accept' => 'Attributet måste accepteras.',
+    'active_url' => 'Attributet är inte en giltig URL.',
+    'after' => 'Attributet måste vara ett datum efter: datum.',
+    'after_or_equal' => 'Attributet måste vara ett datum efter eller lika med: datum.',
+    'alpha' => 'Attributet kan endast innehålla bokstäver.',
+    'alpha_dash' => 'Attributet kan endast innehålla bokstäver, siffror och bindestreck.',
+    'alpha_num' => 'Attributet kan endast innehålla bokstäver och siffror.',
+    'array' => 'Attributet måste vara en matris.',
+    'before' => 'Attributet måste vara ett datum före: datum.',
+    'before_or_equal' => 'Attributet måste vara ett datum före eller lika med: datum.',
+    'mellan' => [
+        'numeric' => 'Attributet måste vara mellan: min och: max.',
+        'file' => 'Attributet måste vara mellan: min och: max kilobyte.',
+        'string' => 'Attributet måste vara mellan: min och: max tecken.',
+        'array' => 'Attributet måste ha mellan: min och: max objekt.',
+    ],
+'boolean' => 'Attributfältet måste vara sant eller falskt.',
+    'staðfest' => 'Bekräftelsen: attributet stämmer inte med.',
+    'current_password' => 'Bekräftelsen: attribut stämmer inte med.',
+    'date' => 'Attributet är inte ett giltigt datum.',
+    'date_format' => 'Attributet matchar inte formatet: format.',
+    'different' => 'Attributet och: andra måste vara olika.',
+    'siffror' => 'Attributet måste vara: siffror.',
+    'digits_between' => 'Attributet måste vara mellan: min och: max siffror.',
+    'dimensioner' => 'Attributet har ogiltiga bilddimensioner.',
+    'distinkta' => 'Fältet: attribut har ett duplikatvärde.',
+    'email' => 'Attributet måste vara en giltig e-postadress.',
+    'exist' => 'Det valda: attributet är ogiltigt.',
+    'file' => 'Attributet måste vara en fil.',
+    'fylt' => 'Fältet: attribut krävs.',
+    'image' => 'Attributet måste vara en bild.',
+    'in' => 'Det valda: attributet är ogiltigt.',
+    'in_array' => 'Attributfältet finns inte i: annat.',
+    'integer' => 'Attributet måste vara ett heltal.',
+    'ip' => 'Attributet måste vara en giltig IP-adress.',
+    'json' => 'Attributet måste vara en giltig JSON-sträng.',
+    'max' => [
+        'numeric' => 'Attributet kan inte vara större än: max.',
+        'file' => 'Attributet får inte vara större än: max kilobyte.',
+        'string' => 'Attributet kan inte vara större än: max tecken.',
+        'array' => 'Attributet kan inte ha mer än: maxobjekt.',
+    ],
+'mimes' => 'Attributet måste vara en fil av typen:: värden.',
+    'mimetypes' => 'Attributet måste vara en fil av typen:: värden.',
+    'min' => [
+        'numeric' => 'Attributet måste vara minst: min.',
+        'file' => 'Attributet måste vara minst: min kilobyte.',
+        'string' => 'Attributet måste vara minst: min tecken.',
+        'array' => 'Attributet måste ha minst: min. objekt.',
+    ],
+    'not_in' => 'Det valda: attributet är ogiltigt.',
+    'numeric' => 'Attributet måste vara ett nummer.',
+    'present' => 'Fältet: attribut måste vara närvarande.',
+    'regex' => 'Attributformatet är ogiltigt.',
+    'required' => 'Attributfältet krävs.',
+    'required_if' => 'Attributfältet krävs när: annat är: värde.',
+    'required_unless' => 'Attributfältet krävs om inte: annat är i: värden.',
+    'required_with' => 'Attributfältet krävs när: värden finns.',
+    'required_with_all' => 'Attributfältet krävs när: värden finns.',
+    'required_without' => 'Attributfältet krävs när: värden inte finns.',
+    'required_without_all' => 'Attributfältet krävs när inget av: värden finns.',
+    'same' => 'Attributet och: andra måste matcha.',
+    'storlek' => [
+        'numeric' => 'Attributet måste vara: storlek.',
+        'file' => 'Attributet måste vara: kilobyte.',
+        'string' => 'Attributet måste vara: storlekstecken.',
+        'array' => 'Attributet måste innehålla: storlekar.',
+    ],
+'string' => 'Attributet måste vara en sträng.',
+    'timezone' => 'Attributet måste vara en giltig zon.',
+    'unique' => 'Attributet har redan tagits.',
+    'upload' => 'Attributet: uppladdningen kunde inte laddas upp.',
+    'url' => 'Attributformatet är ogiltigt.',
+
+   
+    'custom' => [
+        'attribute-name' => [
+            'rule-name' => 'anpassat meddelande',
+        ],
+    ],
+
+   
+
+    'attribut' => [],
+
+];

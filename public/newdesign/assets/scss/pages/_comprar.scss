@@ -1,0 +1,81 @@
+.comprar-section{
+
+
+    .card-input-radio{
+       
+
+        .card-info-input{
+            small{
+                font-size: 0.7rem;
+            }
+            strong{
+                font-size: 0.8rem;
+            }
+
+            &::after{
+                left: -30px;
+                transform: scale(0.5);
+            }
+        }
+    }
+
+    .dropdown-transparent{
+
+        button{
+           color: $light !important;
+
+           &::after {
+            display: none !important;
+            }
+        }
+
+    }
+
+
+
+
+    .btn-add-tarjeta {
+        max-width: 200px;
+    }
+
+
+    .owl-carousel-comprar{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+        .item{
+            background: $blue-fourth !important;
+            min-width: 240px !important;
+            height: auto !important;
+            border-radius: 5px;
+            color: $light !important;
+            padding: 10px 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+            body.dark-mode &{
+                background: linear-gradient(180deg, #555BCD 0%, #8B90F8 100%) !important;
+            }
+    
+            small{
+                color: $light !important;
+            }
+    
+            button{
+                border:  1px solid $light !important;
+                width: 100%;
+                color: $light !important;
+                &:focus{
+                    background: #4c85ff26 !important;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12) !important;
+                }
+            }
+    
+        }
+    
+    }
+    
+
+   
+
+    
+
+}

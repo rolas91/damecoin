@@ -1,0 +1,146 @@
+.section-queEsBitcoin{
+
+
+    .section-two{
+
+
+        .info{
+            background: #F5F7FB;
+            border-radius: 10px;
+            padding: 25px 20px;
+        }
+
+        ul > li{
+            color: #4C84FF;
+            margin-top: 20px;
+        }
+
+        ul li p{
+            color: $dark;
+        }
+
+
+    }
+
+
+    .img-right{
+        width: 580px;
+        height: 550px;
+        float: right;
+        margin-right: -120px;
+    }
+
+    .img-left{
+        width: 580px;
+        height: 550px;
+        margin-left: -120px;
+    }
+
+    .card-pasos{
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        position: relative;
+      
+        @include large{
+            &.line::before{
+                content: '';
+                // background: red;
+                width: 10px;
+                height: 370px;
+                position: absolute;
+                left: 4.5%;
+                top: 5px;
+                border-left: 2px dashed #23509D;
+                z-index: -1;
+            }
+        }
+
+        .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #23509D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: $light;
+        }
+
+
+
+    }
+
+
+    .corte-completo{
+        background: #F5F7FB;
+
+        &::before{
+            content: '';
+            background: $light;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            clip-path: polygon(0 0, 100% 0, 100% 24%, 0% 100%);
+        }
+
+    }
+
+    .card-dashboard{
+        width: 25rem;
+        box-shadow: 22px 37px 97px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        border: none;
+        .card-header{
+            background: transparent;
+            border: none;
+            img{
+                width: 80%;
+            }
+
+        }
+
+        .card-body{
+            color: #464646;
+
+            p span{
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+
+    .section-Comprar{
+        background: #F5F7FB;
+        position: relative;
+        &::before{
+            content: '';
+            background: $light;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            clip-path: polygon(0 0, 100% 0, 100% 24%, 0% 100%);
+        }
+
+        &::after{
+            content: '';
+            background: $light;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            clip-path: polygon(100% 100%, 100% 0, 0 84%, 0% 100%);
+        }
+
+    }
+
+
+
+}

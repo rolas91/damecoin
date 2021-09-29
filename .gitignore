@@ -1,0 +1,17 @@
+/node_modules
+/public/storage
+/public/.htaccess
+/public/docs
+/public/blog
+/public/web-development 
+/database/ip2location
+/database/.DS_Store
+/storage/*.key
+/vendor
+/.idea
+.DS_Store
+Homestead.json
+Homestead.yaml
+.env
+composer.lock
+*.htaccess

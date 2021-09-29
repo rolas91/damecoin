@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/买-:cripto/与-卡-在-:currency',
+
+
+];

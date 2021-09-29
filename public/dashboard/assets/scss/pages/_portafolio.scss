@@ -1,0 +1,26 @@
+
+.portafolio-section{
+
+  .balance-container{
+
+    display: flex;
+    flex-direction: column;
+
+    @include large{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+
+    .balance-info{
+    
+        span{
+            font-size: 0.9rem !important;
+        }
+    }
+  }
+
+
+  
+
+}

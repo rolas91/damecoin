@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/acquistare-:cripto/con-card-in-:currency',
+
+
+];

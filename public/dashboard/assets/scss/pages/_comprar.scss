@@ -1,0 +1,316 @@
+.comprar-section{
+
+
+    .card-input-radio{
+       
+
+        .card-info-input{
+            small{
+                font-size: 0.7rem;
+            }
+            strong{
+                font-size: 0.8rem;
+            }
+
+            &::after{
+                left: -30px;
+                transform: scale(0.5);
+            }
+        }
+    }
+
+    .dropdown-transparent{
+
+        button{
+           color: $light !important;
+
+           &::after {
+            display: none !important;
+            }
+        }
+
+    }
+
+
+    .two-column{
+        position: relative;
+
+        .icon-number{
+            width: 30px;
+            height: 30px;
+            margin-top: -3px;
+            position: relative;
+            
+        }
+
+        .icon-line{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 480px;
+
+            border-right: 1.5px dashed #FFFFFF;
+
+        }
+
+        @include large{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+    }
+
+    .btn-add-tarjeta {
+        max-width: 200px;
+    }
+
+
+    .owl-carousel-comprar{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+        .item{
+            background: $blue-fourth !important;
+            min-width: 240px !important;
+            height: auto !important;
+            border-radius: 5px;
+            color: $light !important;
+            padding: 10px 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+            body.dark-mode &{
+                background: linear-gradient(180deg, #555BCD 0%, #8B90F8 100%) !important;
+            }
+    
+            small{
+                color: $light !important;
+            }
+    
+            button{
+                border:  1px solid $light !important;
+                width: 100%;
+                color: $light !important;
+                &:focus{
+                    background: #4c85ff26 !important;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12) !important;
+                }
+            }
+    
+        }
+    
+    }
+    
+
+    .accordion-comprar{
+
+        button{
+            background: #3E486C;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: $light;
+            text-decoration: none;
+            img{
+                width: 15px;
+            }
+        }
+
+        .card{
+            box-shadow: none !important;
+            background: transparent;
+            padding-top: 0;
+            margin: 0;
+            margin: 5px 0;
+        }
+
+        .card-header{
+            padding: 5px 0;
+        }
+
+        .card-body{
+            font-size: 0.8rem;
+            padding-top: 0;
+        }
+
+    }
+
+
+    .input-group-monto{
+        input{
+            height: 50px;
+        }
+
+        .input-group-append{
+            
+            .input-group-text{
+                background: #16285E; 
+                border-color: #16285E; 
+                display: grid !important;
+                grid-template-columns: 30px 1fr;
+                align-items: center;
+                padding: 3px 10px;
+                color: $light;
+                img{
+                    width: 20px;
+                }
+
+                strong{
+                    font-size: 0.9rem;
+                }
+
+                small{
+                    color: $light !important;
+                    font-size: 0.7rem;
+                    margin-top: -5px;
+                }
+
+            }
+        }
+
+    }
+
+    .card-name{
+
+        background: $light;
+        padding: 10px 3px;
+        border-radius: 5px;
+
+        @include large{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        body.dark-mode &{
+            color:#464646;
+        }
+
+    }
+
+
+    .card-upload{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .input-file-custom{
+       
+       
+        overflow: hidden;
+        position: relative;
+        background: #16285E;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 5px;
+        color: $light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        span{
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        input{
+            position:  absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top:0;
+            appearance: none;
+            cursor: pointer;
+            opacity: 0;
+            *{
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .card-dark-comprar{
+        background: #3E486C;
+        border-radius: 5px;
+        color: $light !important;
+    }
+
+
+    .progress-gradient{
+        min-width: 100px;
+        border-radius: 19px;
+        height: 0.8rem;
+        border: 2px solid #3E486C;
+        .progress-bar{
+            background: linear-gradient(90deg, #FF4444 4.26%, #FF9E44 21.61%, #FFE05A 52.16%, #23D160 103.87%);
+        }
+    
+    }
+
+    .time{
+        color: $green;
+        padding: 5px;
+        border: 1px solid $light;
+        border-radius: 5px;
+        small{
+            color: $green !important;
+        }
+    }
+   
+
+    .footer-card{
+        background: #3E486C;
+        border-radius: 0px 0px 10px 10px;
+        font-size: 0.8rem;
+        color: $light !important;
+    }
+
+
+    .card-recomendado{
+
+        .card-header{
+            background: $blue-eight !important;
+            border-radius: 0 10px 0 0 !important;
+            color: $light !important;
+            position: relative;
+            .icon-1{
+                background: #1045FF;
+                border-radius: 8px 8px 0px 0px;
+                position: absolute;
+                padding: 5px;
+                font-size: 0.8rem;
+                top:   -29px;
+                left: 0;
+            }
+
+            .icon-2{
+                background: #23D160;
+                border-radius: 5px;
+                width: 250px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -10px;
+                margin: auto;
+                font-size: 0.8rem;
+            }
+
+
+        }
+    }
+
+    .input-group-calendar{
+        .input-group-text {
+            background: $light !important;
+            border-left: none !important;
+            img{
+                width: 20px;
+            }
+        }
+    }
+
+    
+
+}

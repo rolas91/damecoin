@@ -1,0 +1,6 @@
+﻿User-agent: *
+Disallow:
+Sitemap: https://damecoins.com/sistemap.xml
+Sitemap: https://damecoins.com/sistemap2.xml
+Sitemap: https://damecoins.com/sistemap3.xml
+

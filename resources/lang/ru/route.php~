@@ -1,0 +1,9 @@
+<?php
+
+return [
+
+
+    'index' => '/купить-:cripto/с-карта-в-:currency',
+
+
+];

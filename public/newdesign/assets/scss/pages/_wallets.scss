@@ -1,0 +1,268 @@
+.wallets-section{
+
+    .wallets-container{
+
+        .card{
+            background: linear-gradient(120.83deg, #3552A2 5.43%, #09173E 107.8%) !important;
+            box-shadow: 7.68833px 8.64937px 14.4156px rgba(0, 0, 0, 0.16) !important;
+            color: $light !important;
+            small{
+                color: $light !important;
+            }
+        }
+
+        .card-body .logo-wallets{
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: $light;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 50%;
+            }
+        }
+
+    
+
+        body.dark-mode &{
+
+            >:nth-child(2n + 1)  .card {
+                background: linear-gradient(180deg, #555BCD 0%, #8B90F8 100%) !important;
+                .card-body .logo-wallets{
+                    background-color: $blue-eight;
+                    img{
+                        filter: brightness(0) invert(1);
+                    }
+                }
+              }
+
+            >:nth-child(2n) .card  .card-body .logo-wallets {
+                background: linear-gradient(180deg, #3EE0F8 0%, #92FFCC 100%);
+                img{
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+
+
+            .wallets-card-add{
+                border: 1px dashed $light !important;
+
+                .card-body{
+                    color: $light !important;
+                }
+            }
+
+        }
+
+
+        .wallets-card-add{
+            background: transparent !important;
+            border-radius: 10px !important;
+            border: 1px dashed $gray-first !important;
+            height: 100% !important;
+            .card-body{
+                color: $gray-first !important;
+                button{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    outline: none !important;
+                    border-style: none !important;
+                    background: linear-gradient(94.83deg, #4C84FF 15.4%, #8BE3FF 102.57%);
+                    box-shadow: 8px 9px 15px rgba(0, 0, 0, 0.16);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $light;
+                    font-weight: 300 !important;
+                }
+            }
+        }
+
+
+    }
+
+    .cryptomonedas-container{
+        .card{
+            background: #F5F7FB;
+            box-shadow: 7.68833px 8.64937px 14.4156px rgba(0, 0, 0, 0.16) !important;
+            color: $blue-eight !important;
+            small{
+                color: $gray-first !important;
+               @include large{
+                color: $blue-eight !important;
+               }
+            }
+        }
+
+        .card-body{
+            position: relative;
+        }
+
+        .logo-crytomonedas{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -35px;
+            left: 10px;
+
+
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .btn-comprar{
+           
+            background: $blue-seven !important;
+            color: $light !important;
+            font-size: 0.9rem !important;
+            margin: 10px auto 0px auto;
+            width: 100%;
+            @include large{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 8px 0px !important;
+                border-style: none !important;
+                margin: 0;
+                width: auto;
+            }
+        }
+        
+        .precio-crypto{
+            color: $gray-first !important;
+            font-weight: 600;
+        }
+
+        body.dark-mode &{
+            .card{
+                background: #2D3463 !important;
+                color: $light !important;
+                small,.precio-crypto{
+                    color: $light !important;
+                }
+            }
+
+            .btn-comprar{
+                background: linear-gradient(102.07deg, #4C84FF 15.4%, #8BE3FF 102.57%) !important;
+            }
+        }
+
+    }
+
+    .tarjeta-banco{
+            padding: 5px;
+            border-radius: 5px;
+            background: $blue-fourth !important;
+            color: $light !important;
+            font-size: 0.9rem !important;
+
+            body.dark-mode &{
+                background: #4D5B81  !important;
+            }
+
+            @include large{
+                display: flex; 
+                align-items: center;
+            }
+
+           button{
+               font-size: 0.8rem !important;
+               color: $light;
+               display: flex;
+               align-items: center;
+               img{
+                   transform: scale(0.8);
+                   margin-right: 2px;
+                   @include large{
+                        transform: scale(1);
+                   }
+               }
+           }
+
+    }
+
+
+    .nav-wallets{
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            padding: 5px;
+            color: #BDBDBD !important;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .active{
+            position: relative !important;
+            color: $gray-first  !important;
+            body.dark-mode &{
+                color: $light !important;
+            }
+
+            &::after{
+                content: '';
+                background: linear-gradient(128.22deg, #4C84FF 15.4%, #6BCEEE 102.57%);
+                width: 100%;
+                height: 7px;
+                border-radius: 5px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+            }
+        }
+
+      
+        .search-walelts{
+            position: relative;
+            overflow: hidden;
+           
+            span{
+                position: absolute;
+                top: 8px;
+                left: 0;
+                z-index: 3;
+                color: #BDBDBD !important;
+            }
+
+            input{
+                padding-left: 25px;
+                padding-right: 0;
+                border-style: none;
+                background: transparent;
+                width: 85px;
+                transition: 0.3s ease;
+                color: #BDBDBD !important;
+                &::placeholder{
+                    color: #BDBDBD !important;
+                    font-weight: 600;
+                }
+
+                &:focus{
+                    width: initial;
+                    transition: 0.3s ease;
+                    box-shadow: none !important;
+                    border-style: none;
+                }
+            }
+        }
+        
+
+        
+
+    }
+
+}

@@ -1,0 +1,84 @@
+.section-metodo-pago{
+
+    .banner{
+ 
+        &::before{
+            content: '';
+            width: 200%;
+            height: 150%;
+            position: absolute;
+            top: 0;
+            left: -50%;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: linear-gradient(90.88deg, #3552A2 -0.6%, #09173E 56.01%);
+            transform: matrix(-0.99, 0.1, 0.1, 0.99, 0, 0);
+        }
+
+        .img-principal{
+            width: 50%;
+            @include large{
+                width: 100%;
+                margin-top: -30px !important;
+            }
+        }
+
+
+    }
+
+    .first-section {
+        background: #3E486C;
+        .card{
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        strong, small{
+            color: $light !important;
+        }
+        
+
+    }
+
+  
+
+    .card-metodo-pago{
+        background: #3E486C !important;
+
+        .card-header{
+            background: transparent;
+            border: none;
+
+            .tipo{
+                color: $light;
+                padding: 2px 10px;
+                border-radius: 5px;
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
+        }
+        .card-body{
+            color: $light;
+
+            .card-text{
+                font-size: 14px !important;
+            }
+            
+            .btn-link{
+                font-size: 14px !important;
+            }
+        }
+    }
+    
+
+
+  
+
+   
+
+   
+ 
+
+}
